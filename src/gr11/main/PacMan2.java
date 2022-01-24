@@ -13,6 +13,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.io.File;
+import jaco.mp3.player.MP3Player;
 import javax.swing.Timer;
 
 /**
@@ -69,6 +71,13 @@ public class PacMan2 extends JComponent implements ActionListener {
     
     Color opacblack = new Color(100, 0, 0, 1);
     
+    // music
+    File musicfile = new File("Y2Mate.is - thomas the train bass boosted 1 hour-fnNNtYUSEoU-160k-1642527632917.mp3");
+    MP3Player earrapefile = new MP3Player (musicfile);
+    
+    File musicfile2 = new File("Y2Mate.is - Rick Rolled (Short Version)-BBJa32lCaaY-160k-1643044347051.mp3");
+    MP3Player rickrole = new MP3Player (musicfile2);
+    
     // GAME VARIABLES END HERE    
 
     
@@ -99,7 +108,22 @@ public class PacMan2 extends JComponent implements ActionListener {
         
         // Set things up for the game at startup
         setup();
-
+        
+        //earrapefile.setRepeat(true);
+        
+        if (earrapefile.isStopped()) {
+            
+            
+        } else if (collected == 1) {
+            
+            rickrole.play();
+            
+        } else if (end) {
+            
+            earrapefile.play();
+            
+        }
+        
        // Start the game loop
         gameTimer = new Timer(desiredTime,this);
         gameTimer.setRepeats(true);
