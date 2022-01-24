@@ -78,6 +78,10 @@ public class PacMan2 extends JComponent implements ActionListener {
     File musicfile2 = new File("Y2Mate.is - Rick Rolled (Short Version)-BBJa32lCaaY-160k-1643044347051.mp3");
     MP3Player rickrole = new MP3Player (musicfile2);
     
+    
+    File musicfile3 = new File("Y2Mate.is - 1 HOUR SPECIAL NIGHTCORE ♫ BEST NIGHTCORE OF ALL TIME  ★  TOP 20 NIGHTCORE SONGS-iA7uQCruBgU-160k-1641312992604.mp3");
+    MP3Player bgmusic = new MP3Player (musicfile3);
+    
     // GAME VARIABLES END HERE    
 
     
@@ -109,25 +113,13 @@ public class PacMan2 extends JComponent implements ActionListener {
         // Set things up for the game at startup
         setup();
         
-        //earrapefile.setRepeat(true);
-        
-        if (earrapefile.isStopped()) {
-            
-            
-        } else if (collected == 1) {
-            
-            rickrole.play();
-            
-        } else if (end) {
-            
-            earrapefile.play();
-            
-        }
-        
        // Start the game loop
         gameTimer = new Timer(desiredTime,this);
         gameTimer.setRepeats(true);
         gameTimer.start();
+        
+        bgmusic.play();
+        
     }
 
     // drawing of the game happens in here
@@ -977,6 +969,24 @@ public class PacMan2 extends JComponent implements ActionListener {
     // The main game loop
     // In here is where all the logic for my game will go
     public void loop1() {
+        
+        if (collected == 66 && rickrole.isStopped()) {
+            
+            bgmusic.stop();
+            
+            rickrole.play();
+            
+        } else if (end && earrapefile.isStopped()) {
+            
+            bgmusic.stop();
+            
+            earrapefile.play();
+            
+        } else if (end || collected == 66) {
+            
+            bgmusic.stop();
+            
+        }
         
         // move left, right, up and down
         if(left){
