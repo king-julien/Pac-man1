@@ -1048,19 +1048,19 @@ public class PacMan2 extends JComponent implements ActionListener {
                 
                 if (up) {
                     
-                    player.y = player.y + speed - 2;
+                    player.y = player.y + speed - 3;
                     
                 } else if (down) {
                     
-                    player.y = player.y - speed + 2;
+                    player.y = player.y - speed + 3;
                     
                 } else if (left) {
                     
-                    player.x = player.x + speed - 2;
+                    player.x = player.x + speed - 3;
                     
                 } else if (right) {
                     
-                    player.x = player.x - speed + 2;
+                    player.x = player.x - speed + 3;
                     
                 }
                 
@@ -1085,22 +1085,19 @@ public class PacMan2 extends JComponent implements ActionListener {
             
             player2.x = player2.x - speed - 1;
             
-        } 
-        if(right2){
+        } else if(right2){
             
             System.out.println("right");
             
             player2.x = player2.x + speed + 1;
             
-        }
-        if(up2){
+        } else if(up2){
             
             System.out.println("up");
             
             player2.y = player2.y - speed - 1;
             
-        }
-        if(down2){
+        } else if(down2){
             
             System.out.println("down");
             
@@ -1138,19 +1135,19 @@ public class PacMan2 extends JComponent implements ActionListener {
                 
                 if (up2) {
                     
-                    player2.y = player2.y + speed - 1;
+                    player2.y = player2.y + speed + 2;
                     
                 } else if (down2) {
                     
-                    player2.y = player2.y - speed + 1;
+                    player2.y = player2.y - speed - 2;
                     
                 } else if (left2) {
                     
-                    player2.x = player2.x + speed - 1;
+                    player2.x = player2.x + speed + 2;
                     
                 } else if (right2) {
                     
-                    player2.x = player2.x - speed + 1;
+                    player2.x = player2.x - speed - 2;
                     
                 }
                 
