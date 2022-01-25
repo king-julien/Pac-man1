@@ -15,6 +15,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
 import java.io.File;
 import jaco.mp3.player.MP3Player;
+import javax.swing.JButton;
 import javax.swing.Timer;
 
 /**
@@ -46,6 +47,7 @@ public class PacMan2 extends JComponent implements ActionListener {
     Rectangle player2 = new Rectangle(435, 308, 20, 20);
     Rectangle leftPotal = new Rectangle(20, 310, 30, 30);
     Rectangle rightPotal = new Rectangle(840, 310, 30, 30);
+    Rectangle button = new Rectangle(465, 475, 100, 50);
     
     // player movement
     boolean left = false;
@@ -551,6 +553,12 @@ public class PacMan2 extends JComponent implements ActionListener {
             g.drawString("Game Over ghost wins", 450, 450);
             System.out.println("bye");
             
+            g.setColor(Color.CYAN);
+            g.fillRect(465, 475, 100, 50);
+            g.drawRect(465, 475, 100, 50);
+            g.setColor(Color.white);
+            g.drawString("restart", 495, 505);
+            
         } else if (collected == 66) {
             
             g.setColor(Color.black);
@@ -560,6 +568,12 @@ public class PacMan2 extends JComponent implements ActionListener {
             g.setColor(Color.white);
             g.drawString("Game Over PacMan wins", 450, 450);
             System.out.println("bye");
+            
+            g.setColor(Color.CYAN);
+            g.fillRect(465, 475, 100, 50);
+            g.drawRect(465, 475, 100, 50);
+            g.setColor(Color.white);
+            g.drawString("restart", 495, 505);
             
         }
         
@@ -1214,7 +1228,16 @@ public class PacMan2 extends JComponent implements ActionListener {
         // if a mouse button has been pressed down
         @Override
         public void mousePressed(MouseEvent e) {
-
+            
+            int x = e.getX();
+            int y = e.getY();
+            
+            if(end && button.contains(x, y)){
+                
+                
+                
+            }
+            
         }
 
         // if a mouse button has been released
