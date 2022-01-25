@@ -890,7 +890,6 @@ public class PacMan2 extends JComponent implements ActionListener {
             
             blocks[145] = new Rectangle (810, 210, 10, 10);
             
-            // move 10 down and 10 to the left
             blocks[146] = new Rectangle (230, 320, 10, 10);
             
             blocks[148] = new Rectangle (290, 320, 10, 10);
@@ -1234,8 +1233,307 @@ public class PacMan2 extends JComponent implements ActionListener {
             
             if(end && button.contains(x, y)){
                 
+                end = false;
                 
+                System.out.println("button");
                 
+            blocks[123] = new Rectangle (70, 50, 10, 10);
+            
+            blocks[124] = new Rectangle (230, 50, 10, 10);
+            
+            blocks[125] = new Rectangle (405, 50, 10, 10);
+            
+            blocks[126] = new Rectangle (475, 50, 10, 10);
+            
+            blocks[127] = new Rectangle (650, 50, 10, 10);
+            
+            blocks[128] = new Rectangle (810, 50, 10, 10);
+            
+            blocks[129] = new Rectangle (70, 130, 10, 10);
+            
+            blocks[130] = new Rectangle (230, 130, 10, 10);
+            
+            blocks[131] = new Rectangle (405, 130, 10, 10);
+            
+            blocks[132] = new Rectangle (475, 130, 10, 10);
+            
+            blocks[133] = new Rectangle (650, 130, 10, 10);
+            
+            blocks[134] = new Rectangle (810, 130, 10, 10);
+            
+            blocks[135] = new Rectangle (290, 130, 10, 10);
+            
+            blocks[136] = new Rectangle (590, 195, 10, 10);
+            
+            blocks[137] = new Rectangle (290, 195, 10, 10);
+            
+            blocks[138] = new Rectangle (475, 195, 10, 10);
+            
+            blocks[139] = new Rectangle (405, 195, 10, 10);
+            
+            blocks[140] = new Rectangle (475, 255, 10, 10);
+            
+            blocks[141] = new Rectangle (405, 255, 10, 10);
+            
+            blocks[142] = new Rectangle (70, 210, 10, 10);
+            
+            blocks[143] = new Rectangle (230, 210, 10, 10);
+            
+            blocks[144] = new Rectangle (650, 210, 10, 10);
+            
+            blocks[145] = new Rectangle (810, 210, 10, 10);
+            
+            blocks[146] = new Rectangle (230, 320, 10, 10);
+            
+            blocks[148] = new Rectangle (290, 320, 10, 10);
+            
+            blocks[147] = new Rectangle (290, 255, 10, 10);
+            
+            blocks[149] = new Rectangle (590, 255, 10, 10);
+            
+            blocks[150] = new Rectangle (590, 320, 10, 10);
+            
+            blocks[151] = new Rectangle (650, 320, 10, 10);
+            
+            blocks[152] = new Rectangle (230, 440, 10, 10);
+            
+            blocks[154] = new Rectangle (290, 440, 10, 10);
+            
+            blocks[155] = new Rectangle (650, 440, 10, 10);
+            
+            blocks[157] = new Rectangle (590, 440, 10, 10);
+            
+            blocks[158] = new Rectangle (400, 440, 10, 10);
+            
+            blocks[159] = new Rectangle (480, 440, 10, 10);
+            
+            blocks[160] = new Rectangle (70, 440, 10, 10);
+            
+            blocks[153] = new Rectangle (290, 375, 10, 10);
+            
+            blocks[156] = new Rectangle (590, 375, 10, 10);
+            
+            blocks[161] = new Rectangle (70, 505, 10, 10);
+            
+            blocks[162] = new Rectangle (160, 505, 10, 10);
+            
+            blocks[163] = new Rectangle (230, 505, 10, 10);
+            
+            blocks[164] = new Rectangle (290, 505, 10, 10);
+            
+            blocks[165] = new Rectangle (70, 585, 10, 10);
+            
+            blocks[166] = new Rectangle (160, 585, 10, 10);
+            
+            blocks[167] = new Rectangle (230, 585, 10, 10);
+            
+            blocks[168] = new Rectangle (290, 585, 10, 10);
+            
+            blocks[169] = new Rectangle (290, 585, 10, 10);
+            
+            blocks[170] = new Rectangle (70, 650, 10, 10);
+            
+            blocks[171] = new Rectangle (160, 650, 10, 10);
+            
+            blocks[172] = new Rectangle (230, 650, 10, 10);
+            
+            blocks[173] = new Rectangle (400, 650, 10, 10);
+            
+            blocks[174] = new Rectangle (400, 505, 10, 10);
+            
+            blocks[175] = new Rectangle (400, 585, 10, 10);
+            
+            blocks[176] = new Rectangle (480, 585, 10, 10);
+            
+            blocks[177] = new Rectangle (590, 585, 10, 10);
+            
+            blocks[178] = new Rectangle (650, 585, 10, 10);
+            
+            blocks[179] = new Rectangle (720, 585, 10, 10);
+            
+            blocks[180] = new Rectangle (480, 650, 10, 10);
+            
+            blocks[183] = new Rectangle (810, 650, 10, 10);
+            
+            blocks[181] = new Rectangle (650, 505, 10, 10);
+            
+            blocks[182] = new Rectangle (720, 505, 10, 10);
+            
+            blocks[184] = new Rectangle (810, 505, 10, 10);
+            
+            blocks[186] = new Rectangle (590, 505, 10, 10);
+            
+            blocks[187] = new Rectangle (480, 505, 10, 10);
+            
+            blocks[188] = new Rectangle (810, 440, 10, 10);
+            
+            blocks[185] = new Rectangle (810, 585, 10, 10);
+            
+            collected = 0;
+            
+            player.x = 433;
+            player.y = 368;
+            
+            player2.x = 435;
+            player2.y = 308;
+            
+            bgmusic.play();
+            
+            rickrole.stop();
+            
+            earrapefile.stop();
+            
+            }
+            
+            
+            if(collected == 66 && button.contains(x, y)){
+            
+            blocks[123] = new Rectangle (70, 50, 10, 10);
+            
+            blocks[124] = new Rectangle (230, 50, 10, 10);
+            
+            blocks[125] = new Rectangle (405, 50, 10, 10);
+            
+            blocks[126] = new Rectangle (475, 50, 10, 10);
+            
+            blocks[127] = new Rectangle (650, 50, 10, 10);
+            
+            blocks[128] = new Rectangle (810, 50, 10, 10);
+            
+            blocks[129] = new Rectangle (70, 130, 10, 10);
+            
+            blocks[130] = new Rectangle (230, 130, 10, 10);
+            
+            blocks[131] = new Rectangle (405, 130, 10, 10);
+            
+            blocks[132] = new Rectangle (475, 130, 10, 10);
+            
+            blocks[133] = new Rectangle (650, 130, 10, 10);
+            
+            blocks[134] = new Rectangle (810, 130, 10, 10);
+            
+            blocks[135] = new Rectangle (290, 130, 10, 10);
+            
+            blocks[136] = new Rectangle (590, 195, 10, 10);
+            
+            blocks[137] = new Rectangle (290, 195, 10, 10);
+            
+            blocks[138] = new Rectangle (475, 195, 10, 10);
+            
+            blocks[139] = new Rectangle (405, 195, 10, 10);
+            
+            blocks[140] = new Rectangle (475, 255, 10, 10);
+            
+            blocks[141] = new Rectangle (405, 255, 10, 10);
+            
+            blocks[142] = new Rectangle (70, 210, 10, 10);
+            
+            blocks[143] = new Rectangle (230, 210, 10, 10);
+            
+            blocks[144] = new Rectangle (650, 210, 10, 10);
+            
+            blocks[145] = new Rectangle (810, 210, 10, 10);
+            
+            blocks[146] = new Rectangle (230, 320, 10, 10);
+            
+            blocks[148] = new Rectangle (290, 320, 10, 10);
+            
+            blocks[147] = new Rectangle (290, 255, 10, 10);
+            
+            blocks[149] = new Rectangle (590, 255, 10, 10);
+            
+            blocks[150] = new Rectangle (590, 320, 10, 10);
+            
+            blocks[151] = new Rectangle (650, 320, 10, 10);
+            
+            blocks[152] = new Rectangle (230, 440, 10, 10);
+            
+            blocks[154] = new Rectangle (290, 440, 10, 10);
+            
+            blocks[155] = new Rectangle (650, 440, 10, 10);
+            
+            blocks[157] = new Rectangle (590, 440, 10, 10);
+            
+            blocks[158] = new Rectangle (400, 440, 10, 10);
+            
+            blocks[159] = new Rectangle (480, 440, 10, 10);
+            
+            blocks[160] = new Rectangle (70, 440, 10, 10);
+            
+            blocks[153] = new Rectangle (290, 375, 10, 10);
+            
+            blocks[156] = new Rectangle (590, 375, 10, 10);
+            
+            blocks[161] = new Rectangle (70, 505, 10, 10);
+            
+            blocks[162] = new Rectangle (160, 505, 10, 10);
+            
+            blocks[163] = new Rectangle (230, 505, 10, 10);
+            
+            blocks[164] = new Rectangle (290, 505, 10, 10);
+            
+            blocks[165] = new Rectangle (70, 585, 10, 10);
+            
+            blocks[166] = new Rectangle (160, 585, 10, 10);
+            
+            blocks[167] = new Rectangle (230, 585, 10, 10);
+            
+            blocks[168] = new Rectangle (290, 585, 10, 10);
+            
+            blocks[169] = new Rectangle (290, 585, 10, 10);
+            
+            blocks[170] = new Rectangle (70, 650, 10, 10);
+            
+            blocks[171] = new Rectangle (160, 650, 10, 10);
+            
+            blocks[172] = new Rectangle (230, 650, 10, 10);
+            
+            blocks[173] = new Rectangle (400, 650, 10, 10);
+            
+            blocks[174] = new Rectangle (400, 505, 10, 10);
+            
+            blocks[175] = new Rectangle (400, 585, 10, 10);
+            
+            blocks[176] = new Rectangle (480, 585, 10, 10);
+            
+            blocks[177] = new Rectangle (590, 585, 10, 10);
+            
+            blocks[178] = new Rectangle (650, 585, 10, 10);
+            
+            blocks[179] = new Rectangle (720, 585, 10, 10);
+            
+            blocks[180] = new Rectangle (480, 650, 10, 10);
+            
+            blocks[183] = new Rectangle (810, 650, 10, 10);
+            
+            blocks[181] = new Rectangle (650, 505, 10, 10);
+            
+            blocks[182] = new Rectangle (720, 505, 10, 10);
+            
+            blocks[184] = new Rectangle (810, 505, 10, 10);
+            
+            blocks[186] = new Rectangle (590, 505, 10, 10);
+            
+            blocks[187] = new Rectangle (480, 505, 10, 10);
+            
+            blocks[188] = new Rectangle (810, 440, 10, 10);
+            
+            blocks[185] = new Rectangle (810, 585, 10, 10);
+            
+            collected = 0;
+            
+            player.x = 433;
+            player.y = 368;
+            
+            player2.x = 435;
+            player2.y = 308;
+            
+            bgmusic.play();
+            
+            rickrole.stop();
+            
+            earrapefile.stop();
+            
             }
             
         }
